@@ -23,10 +23,17 @@
                     <button class="kontaktai"><a href="/assets/html/laikasdirbti_3.html">Kontaktai</a></button>
                 </div>
             </div>
-            <button class="hamburger">
-                <i class="menuIcon material-icons">menu</i>
-                <i class="closeIcon material-icons">close</i>
-            </button>
-        </div>
-        </div>
+            <div class="navigation">
+                <input type="checkbox" class="toggle-menu" />
+                <div class="hamburger"></div>
+                <div class="menu">
+                    <div class="buttons-toggle">
+                        <button class="apie-mus"><a href="/assets/html/laikasdirbti_1.html">Apie mus</a></button>
+                        <button class="specialistu-paieska">
+                            <a href="/assets/html/laikasdirbti_2.html">Specialistų paieška</a>
+                        </button>
+                        <button class="kontaktai"><a href="/assets/html/laikasdirbti_3.html">Kontaktai</a></button>
+                    </div>
+                </div>
+            </div>
     </header>
