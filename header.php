@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laikas dirbti</title>
+
     <?php wp_head(); ?>
 </head>
 
@@ -13,8 +13,19 @@
     <header class="header index-header">
         <div class="container">
             <div class="logo">
-                <a href="#"><img src="/wp-content/themes/projektas/assets/img/Laikas-Dirbti-Logo.1.jpg" alt="logo" /></a>
+                <a href="#"><img src="wp-content\themes\projektas\assets\img/Laikas-Dirbti-Logo.1.jpg" alt="logo" /></a>
             </div>
+
+            <?php
+            wp_nav_menu(
+                array(
+                    'menu' => 'primary',
+                    'container' => '',
+                    'theme_location' => 'primary'
+                    'items_wrap' => '<div>%3$s</div>'
+                )
+            );
+            ?>
             <div class="main-navigation">
                 <div class="buttons">
                     <button class="apie-mus"><a href="/assets/html/laikasdirbti_1.html">Apie mus</a></button>
