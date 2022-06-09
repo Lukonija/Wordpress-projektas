@@ -13,7 +13,7 @@
     <header class="header index-header">
         <div class="container">
             <div class="logo">
-                <a href="#"><img src="/wp-content/themes/projektas/theme-template/img/Laikas-Dirbti-Logo.1.jpg" alt="logo" /></a>
+                <a href="/projektas"><img src="/projektas/wp-content/themes/projektas/theme-template/img/Laikas-Dirbti-Logo.1.jpg" alt="logo" /></a>
             </div>
             <?php
             wp_nav_menu(

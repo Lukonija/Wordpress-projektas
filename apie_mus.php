@@ -1,5 +1,5 @@
 <?php /* Template Name: apie_mus */ ?>
-<?php get_header1(); ?>
+<?php get_header(); ?>
 
 <?php
 if (have_posts()) {
