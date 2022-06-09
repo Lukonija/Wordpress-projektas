@@ -11,49 +11,67 @@
     <header class="header">
       <div class="container">
         <div class="logo">
-          <a href="/index.html"><img src="/assets/img/Laikas-Dirbti-Logo.1.jpg" alt="logo" /></a>  
+          <a href="/index.html"
+            ><img src="/assets/img/Laikas-Dirbti-Logo.1.jpg" alt="logo"
+          /></a>
         </div>
-        <div class="main-navigation">
-          <div class="buttons">
-            <button class="apie-mus"><a href="/assets/html/laikasdirbti_1.html">Apie mus</a></button>
-            <button class="specialistu-paieska active">
-              <a href="#">Specialistų paieška</a>
-            </button>
-            <button class="kontaktai"><a href="/assets/html/laikasdirbti_3.html">Kontaktai</a></button>
-          </div>
-        </div>
-        <div class="navigation">
-          <input type="checkbox" class="toggle-menu" />
-          <div class="hamburger"></div>
-          <div class="menu">
-            <div class="buttons-toggle">
-              <button class="apie-mus"><a href="/assets/html/laikasdirbti_1.html">Apie mus</a></button>
-              <button class="specialistu-paieska active">
-                <a href="#">Specialistų paieška</a>
-              </button>
-              <button class="kontaktai"><a href="/assets/html/laikasdirbti_3.html">Kontaktai</a></button>
-          </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="/assets/html/laikasdirbti_1.html" class="nav-link"
+              >Apie mus</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a href="/assets/html/laikasdirbti_2.html" class="nav-link"
+              >Specialistų paieška</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="/assets/html/laikasdirbti_3.html" class="nav-link"
+              >Kontaktai</a
+            >
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </div>
     </header>
     <main>
       <div class="main">
         <div class="container-main">
-
           <form class="searchForm">
-            <input class="searchInput" type="text" placeholder="Įveskite specialisto pavadinimą" required>
+            <input
+              class="searchInput"
+              type="text"
+              placeholder="Įveskite specialisto pavadinimą"
+              required
+            />
             <button class="searchButton" type="submit">Ieškoti</button>
           </form>
-    
-          </div>
+        </div>
       </div>
     </main>
     <footer>
       <div class="container-footer">
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Laikas dirbti, UAB</p>
+        <p>
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Laikas dirbti, UAB
+        </p>
       </div>
     </footer>
     <script>
-      </script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
