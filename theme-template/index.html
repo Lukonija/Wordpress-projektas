@@ -1,55 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laikas dirbti</title>
-  <link rel="stylesheet" href="/assets/css/laikasdirbti.css" />
-</head>
-
-<body>
-  <header class="header index-header">
-    <div class="container">
-      <div class="logo">
-        <a href="#"><img src="/wp-content/themes/projektas/assets/img/Laikas-Dirbti-Logo.1.jpg" alt="logo" /></a>
-      </div>
-      <div class="main-navigation">
-        <div class="buttons">
-          <button class="apie-mus"><a href="/assets/html/laikasdirbti_1.html">Apie mus</a></button>
-          <button class="specialistu-paieska">
-            <a href="/assets/html/laikasdirbti_2.html">Specialistų paieška</a>
-          </button>
-          <button class="kontaktai"><a href="/assets/html/laikasdirbti_3.html">Kontaktai</a></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laikas dirbti</title>
+    <link rel="stylesheet" href="/assets/css/laikasdirbti.css" />
+  </head>
+  <body>
+    <header class="header index-header">
+      <div class="container">
+        <div class="logo">
+          <a href="#"
+            ><img src="/assets/img/Laikas-Dirbti-Logo.1.jpg" alt="logo"
+          /></a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="/assets/html/laikasdirbti_1.html" class="nav-link"
+              >Apie mus</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="/assets/html/laikasdirbti_2.html" class="nav-link"
+              >Specialistų paieška</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="/assets/html/laikasdirbti_3.html" class="nav-link"
+              >Kontaktai</a
+            >
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </div>
-      <div class="navigation">
-        <input type="checkbox" class="toggle-menu" />
-        <div class="hamburger"></div>
-        <div class="menu">
-          <div class="buttons-toggle">
-            <button class="apie-mus"><a href="/assets/html/laikasdirbti_1.html">Apie mus</a></button>
-            <button class="specialistu-paieska">
-              <a href="/assets/html/laikasdirbti_2.html">Specialistų paieška</a>
-            </button>
-            <button class="kontaktai"><a href="/assets/html/laikasdirbti_3.html">Kontaktai</a></button>
-          </div>
-        </div>
-      </div>
-  </header>
+    </header>
     <div class="index-fonas">
       <h1 class="index-h1">Jūsų darbo jėgos poreikis - mūsų rūpestis.</h1>
     </div>
-  <footer class="index-footer">
-    <div class="container-footer">
-      <p>&copy;
-        <script>document.write(new Date().getFullYear())</script> Laikas dirbti, UAB
-      </p>
-    </div>
-  </footer>
-  <script>
-  </script>
-</body>
-
+    <footer class="index-footer">
+      <div class="container-footer">
+        <p>
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Laikas dirbti, UAB
+        </p>
+      </div>
+    </footer>
+    <script>
+      const activePage = window.location.pathname;
+      const navLinks = document
+        .querySelectorAll(".nav-menu a")
+        .forEach((link) => {
+          if (link.href.includes(`${activePage}`)) {
+            link.classList.add("active");
+            console.log(link);
+          }
+        });
+    </script>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
 </html>
