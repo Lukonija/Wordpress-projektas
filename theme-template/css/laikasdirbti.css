@@ -55,21 +55,17 @@ a {
   color: white;
   mix-blend-mode: difference;
 }
-.nav-menu li:hover:not(.active) {
+.nav-menu li:hover {
   border-bottom: white solid 5px;
   padding-bottom: 0.5rem;
   mix-blend-mode: difference;
   margin-top: -5px;
 }
-.active {
-  background: white;
-  height: 2rem;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 7px;
+a:is(:link, :active, :visited).active {
   color: black;
-  cursor: default;
-  mix-blend-mode: difference;
+  background-color: white;
+  height: 2rem;
+  padding: 7px 10px;
 }
 .hamburger {
   display: none;
@@ -86,7 +82,7 @@ a {
   background-color: white;
   mix-blend-mode: difference;
 }
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
   .hamburger {
     display: block;
   }
